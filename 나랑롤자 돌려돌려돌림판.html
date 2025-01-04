@@ -274,6 +274,12 @@
                           legendsContainer.appendChild(legendGroup);
                       }
 
+                      if (index == 0){
+                        const legendItem = document.createElement('div');
+                        legendItem.className = 'legend-item';
+                        legendItem.innerText = '2024-12-16T00:00:00.000+09:00 ~ 2024-12-22T23:59:59.000+09:00'
+                      }
+
                       // Create legend item
                       const legendItem = document.createElement('div');
                       legendItem.className = 'legend-item';
