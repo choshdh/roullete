@@ -495,7 +495,7 @@
         ];
 
 
-		window.segments = JSON.parse('[["김영지 영디개고수",2]]');
+		window.segments = JSON.parse('[["김영지 영디개고수",2],["구새얀 얀진이네",2]]');
 		const segmentsRef = ref(db, "segments");
 		onValue(segmentsRef, (snapshot) => {
             const data = snapshot.val();
