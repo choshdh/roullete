@@ -495,7 +495,7 @@
         ];
 
 
-		window.segments = JSON.parse('[]');
+		window.segments = JSON.parse('[["김영지 영디개고수",2],["홍석범 엉덩이빵빵빵",12],["이지훈 내꿈은뽀로롱",4],["김성현 피부과일",24],["조찰리 챱챱마루",26],["우지완 아몰랑아아",7],["김동엽 해찬",10],["성연두 사 신",1]]');
 		const segmentsRef = ref(db, "segments");
 		onValue(segmentsRef, (snapshot) => {
             const data = snapshot.val();
