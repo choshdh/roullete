@@ -712,7 +712,7 @@
                 if (normalizedRotation >= currentAngle && normalizedRotation < currentAngle + segmentAngle) {
                     setTimeout(function () {
                         showWinner(name, ___rotation, cId); // 당첨자 표시
-                        startFireworksLoop(); // 폭죽 효과
+                        //startFireworksLoop(); // 폭죽 효과  //미션 내전 임시방편 주석처리
                     }, 50)
                     return;
                 }
@@ -724,7 +724,8 @@
 
             const messageContainer = document.getElementById('winner-message');
             const winnerName = document.getElementById('winner-name');
-            winnerName.innerHTML = `축하합니다!<br>당첨자는 ${name}님입니다!`;
+            //winnerName.innerHTML = `축하합니다!<br>당첨자는 ${name}님입니다!`; //미션 내전 임시방편 주석처리
+            winnerName.innerHTML = `이번미션은!<br>${name} 입니다!`;
             messageContainer.classList.remove('hidden');
 
             messageContainer.onclick = function () {
