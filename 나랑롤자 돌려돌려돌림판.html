@@ -968,27 +968,6 @@
         const sendButton = document.getElementById("sendButton");
         const chatMessages = document.getElementById("chatMessages");
 
-        // 초기 데이터 한 번에 로드
-        get(limitedChatRef).then((snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                for (const key in data) {
-                    const message = data[key];
-                    const nickname = message.nickname || "알 수 없음";
-                    const text = message.message;
-
-                    const messageElement = document.createElement("div");
-                    messageElement.style.marginBottom = "10px";
-                    messageElement.textContent = `${nickname}: ${text}`;
-                    chatMessages.appendChild(messageElement);
-                }
-                // 스크롤 항상 아래로
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-        }).catch((error) => {
-            console.error("초기 데이터 로드 실패:", error);
-        });
-
         // 새로 추가되는 메시지 처리
         onChildAdded(limitedChatRef, (snapshot) => {
             const data = snapshot.val();
